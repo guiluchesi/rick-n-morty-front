@@ -1,8 +1,16 @@
+import { Routes, Route, Navigate } from 'react-router-dom'
+import NotFound from './components/NotFound'
+import Listing from './pages/Listing'
+import Character from './pages/Character'
+
 const App = () => {
   return (
-    <h1 className='text-3xl font-bold underline text-center mt-10'>
-      Hello world!
-    </h1>
+    <Routes>
+      <Route path='/' element={<Listing />} />
+      <Route path='/character' element={<Navigate replace to='/' />} />
+      <Route path='/character/:charName' element={<Character />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
   )
 }
 
