@@ -1,6 +1,7 @@
+import { ReactElement } from 'react'
 import { useParams } from 'react-router-dom'
 
-const Character = () => {
+const Character = (): ReactElement => {
   const { charName } = useParams()
 
   return (

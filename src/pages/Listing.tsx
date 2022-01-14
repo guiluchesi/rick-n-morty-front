@@ -1,6 +1,7 @@
+import { ReactElement } from 'react'
 import Header from '../components/Header'
 
-const Listing = () => (
+const Listing = (): ReactElement => (
   <>
     <Header />
     <main className='bg-zinc-800 h-screen py-10 mt-10'>

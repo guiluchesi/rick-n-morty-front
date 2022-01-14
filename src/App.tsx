@@ -1,9 +1,11 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+import { ReactElement } from 'react'
+
 import NotFound from './components/NotFound'
 import Listing from './pages/Listing'
 import Character from './pages/Character'
 
-const App = () => {
+const App = (): ReactElement => {
   return (
     <Routes>
       <Route path='/' element={<Listing />} />

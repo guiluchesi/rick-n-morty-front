@@ -1,9 +1,10 @@
+import { ReactElement } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Header = () => {
+const Header = (): ReactElement => {
   const navigate = useNavigate()
 
-  const getRandomName = () => {
+  const getRandomName = (): string => {
     const names = [
       'rick',
       'morty',
@@ -16,7 +17,7 @@ const Header = () => {
     return randomName
   }
 
-  const randomizeCharacter = () => {
+  const randomizeCharacter = (): void => {
     navigate(`/character/${getRandomName()}`)
   }
 
