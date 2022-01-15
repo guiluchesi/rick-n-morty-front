@@ -6,6 +6,7 @@ import CharacterCard from '../components/CharacterCard'
 const Listing = (): ReactElement => {
   const characters = [
     {
+      id: 1,
       name: 'Blue Diplomat',
       status: 'Alive',
       species: 'Alien',
@@ -16,6 +17,7 @@ const Listing = (): ReactElement => {
       ]
     },
     {
+      id: 2,
       name: 'Boobloosian',
       status: 'Dead',
       species: 'Alien',
