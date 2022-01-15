@@ -3,34 +3,10 @@ import { Link } from 'react-router-dom'
 
 import Header from '../components/Header'
 import CharacterCard from '../components/CharacterCard'
+import characters from '../data/characters'
+import { Character } from '../types'
 
 const Listing = (): ReactElement => {
-  const characters = [
-    {
-      id: 1,
-      name: 'Blue Diplomat',
-      status: 'Alive',
-      species: 'Alien',
-      location: 'Interdimensional Cable',
-      image: 'https://rickandmortyapi.com/api/character/avatar/51.jpeg',
-      episodes: [
-        'Interdimensional Cable 2: Tempting Fate'
-      ]
-    },
-    {
-      id: 2,
-      name: 'Boobloosian',
-      status: 'Dead',
-      species: 'Alien',
-      location: 'Nuptia 4',
-      image: 'https://rickandmortyapi.com/api/character/avatar/55.jpeg',
-      episodes: [
-        'Big Trouble in Little Sanchez',
-        'The Wedding Squanchers'
-      ]
-    }
-  ]
-
   return (
     <>
       <Header />
@@ -39,7 +15,7 @@ const Listing = (): ReactElement => {
           Listing
         </h1>
         <div className='mt-5 list container grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4'>
-          {characters.map((character): ReactElement => (
+          {characters.map((character: Character): ReactElement => (
             <Link key={character.id} to={`/character/${character.id}`}>
               <CharacterCard character={character} />
             </Link>
