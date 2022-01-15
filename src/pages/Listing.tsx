@@ -1,4 +1,5 @@
 import { ReactElement } from 'react'
+import { Link } from 'react-router-dom'
 
 import Header from '../components/Header'
 import CharacterCard from '../components/CharacterCard'
@@ -38,7 +39,11 @@ const Listing = (): ReactElement => {
           Listing
         </h1>
         <div className='mt-5 list container grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4'>
-          {characters.map((character): ReactElement => (<CharacterCard key={character.name} character={character} />))}
+          {characters.map((character): ReactElement => (
+            <Link key={character.id} to={`/character/${character.id}`}>
+              <CharacterCard character={character} />
+            </Link>
+          ))}
         </div>
       </main>
     </>
