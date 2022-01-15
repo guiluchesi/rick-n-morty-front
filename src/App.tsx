@@ -10,7 +10,7 @@ const App = (): ReactElement => {
     <Routes>
       <Route path='/' element={<Listing />} />
       <Route path='/character' element={<Navigate replace to='/' />} />
-      <Route path='/character/:charName' element={<Character />} />
+      <Route path='/character/:charId' element={<Character />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )
