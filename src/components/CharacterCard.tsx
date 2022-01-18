@@ -15,7 +15,7 @@ const CharacterCard = ({ character }: Props): ReactElement => {
       </figure>
 
       <div className='card-body p-4'>
-        <h3 className='text-3xl font-bold text-white'>{character.name}</h3>
+        <h2 className='text-3xl font-bold text-white'>{character.name}</h2>
         <TextWithStatus status={character.status} text={character.species} />
 
         <p className='mt-5 text-neutral-400 font-light'>Last known location:</p>
