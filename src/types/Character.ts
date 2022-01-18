@@ -1,3 +1,5 @@
+import Episode from './Episode'
+
 interface Character {
   id: number
   name: string
@@ -5,7 +7,7 @@ interface Character {
   species: string
   location: string
   image: string
-  episodes: string[]
+  episodes: Episode[]
 }
 
 export default Character

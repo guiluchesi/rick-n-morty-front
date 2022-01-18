@@ -1,3 +1,5 @@
+import episodes from './episodes'
+
 const characters = [
   {
     id: 1,
@@ -6,9 +8,7 @@ const characters = [
     species: 'Alien',
     location: 'Interdimensional Cable',
     image: 'https://rickandmortyapi.com/api/character/avatar/51.jpeg',
-    episodes: [
-      'Interdimensional Cable 2: Tempting Fate'
-    ]
+    episodes
   },
   {
     id: 2,
@@ -17,10 +17,7 @@ const characters = [
     species: 'Alien',
     location: 'Nuptia 4',
     image: 'https://rickandmortyapi.com/api/character/avatar/55.jpeg',
-    episodes: [
-      'Big Trouble in Little Sanchez',
-      'The Wedding Squanchers'
-    ]
+    episodes
   }
 ]
 
