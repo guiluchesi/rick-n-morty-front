@@ -1,6 +1,16 @@
 import Episode from './Episode'
 
-interface Character {
+export interface CharacterListing {
+  id: number
+  name: string
+  status: string
+  species: string
+  location: string
+  image: string
+  firstSeen: string
+}
+
+export interface CharacterDetails {
   id: number
   name: string
   status: string
@@ -9,5 +19,3 @@ interface Character {
   image: string
   episodes: Episode[]
 }
-
-export default Character
