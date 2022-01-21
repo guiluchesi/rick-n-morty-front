@@ -1,5 +1,5 @@
 {
-  "name": "bud-rick-n-morty",
+  "name": "rick-n-morty-front",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
