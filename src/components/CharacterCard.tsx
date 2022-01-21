@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
 import TextWithStatus from './TextWithStatus'
-import { Character as CharacterType } from '../types'
+import { CharacterListing as CharacterType } from '../types'
 
 interface Props {
   character: CharacterType
@@ -9,8 +9,8 @@ interface Props {
 
 const CharacterCard = ({ character }: Props): ReactElement => {
   return (
-    <div className='card flex bg-zinc-700 rounded-lg overflow-hidden'>
-      <figure className='max-w-[160px] md:max-w-[220px]'>
+    <div className='card flex bg-zinc-700 rounded-lg overflow-hidden h-full items-center'>
+      <figure className='max-w-[160px] md:max-w-[220px] h-full'>
         <img className='object-cover h-full' src={character.image} alt={character.name} />
       </figure>
 
@@ -22,7 +22,7 @@ const CharacterCard = ({ character }: Props): ReactElement => {
         <p className='text-white text-lg font-light truncate'>{character.location}</p>
 
         <p className='mt-4 text-neutral-400 font-light'>First seen in:</p>
-        <p className='text-white font-light truncate'>{character.episodes.at(0)?.name}</p>
+        <p className='text-white font-light truncate'>{character.firstSeen}</p>
       </div>
     </div>
   )
