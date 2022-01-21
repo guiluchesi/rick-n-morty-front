@@ -1,27 +1,22 @@
-import { ReactElement } from 'react'
+import { ReactElement, useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Header = ({
   title = 'The Rick and Morty API'
 }): ReactElement => {
   const navigate = useNavigate()
-
-  const getRandomName = (): string => {
-    const names = [
-      'rick',
-      'morty',
-      'summer',
-      'bird-person'
-    ]
-
-    const randomIndex = Math.floor(Math.random() * names.length)
-    const randomName = names[randomIndex]
-    return randomName
-  }
+  const [characterCount, setCharacterCount] = useState<number>(0)
 
   const randomizeCharacter = (): void => {
-    navigate(`/character/${getRandomName()}`)
+    const randomId = Math.floor(Math.random() * characterCount)
+    navigate(`/character/${randomId}`)
   }
+
+  useEffect(() => {
+    void fetch('http://localhost:3000/characters/count')
+      .then(async response => await response.json())
+      .then(data => setCharacterCount(data.charactersCount))
+  }, [])
 
   return (
     <header className='relative bg-white'>
@@ -37,7 +32,7 @@ const Header = ({
               <Link to='/' className='font-bold p-3'>Listing</Link>
             </li>
             <li className='ml-4'>
-              <button onClick={randomizeCharacter} className='font-bold p-3'>Random Char</button>
+              <button onClick={randomizeCharacter} className='font-bold p-3'>Random Character</button>
             </li>
           </ul>
         </nav>
