@@ -1,8 +1,8 @@
 import { ReactElement } from 'react'
 
-const TextWithStatus = ({ text = '', status = 'Unknown' }): ReactElement => {
+const TextWithStatus = ({ text = '', status = 'unknown' }): ReactElement => {
   const statusMapping = new Map([
-    ['Unknown', 'before:bg-slate-400'],
+    ['unknown', 'before:bg-slate-400'],
     ['Dead', 'before:bg-red-400'],
     ['Alive', 'before:bg-green-500 before:animate-pulse']
   ])
