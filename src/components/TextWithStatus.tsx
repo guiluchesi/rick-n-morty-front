@@ -4,7 +4,7 @@ const TextWithStatus = ({ text = '', status = 'Unknown' }): ReactElement => {
   const statusMapping = new Map([
     ['Unknown', 'before:bg-slate-400'],
     ['Dead', 'before:bg-red-400'],
-    ['Alive', 'before:bg-green-500']
+    ['Alive', 'before:bg-green-500 before:animate-pulse']
   ])
 
   const getStatusClass = (status: string): string => {
