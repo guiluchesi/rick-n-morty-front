@@ -15,7 +15,7 @@ const Listing = (): ReactElement => {
   const loadCharacters = (page: number): void => {
     setStatus('loading')
 
-    void fetch(`http://localhost:3000/characters?page=${page}`)
+    void fetch(`https://rick-n-morty-api.herokuapp.com/characters?page=${page}`)
       .then(async response => await response.json())
       .then(characters => {
         setCharactersList(prevCharactersList => [...prevCharactersList, ...characters])

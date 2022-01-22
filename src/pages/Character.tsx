@@ -19,7 +19,7 @@ const Character = (): ReactElement => {
   const getCharDetails = (charId: number): void => {
     setStatus('loading')
 
-    void fetch(`http://localhost:3000/characters/${charId}`)
+    void fetch(`https://rick-n-morty-api.herokuapp.com/characters/${charId}`)
       .then(async response => await response.json())
       .then(character => {
         setCharacter(character)

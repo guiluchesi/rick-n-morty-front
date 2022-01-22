@@ -13,7 +13,7 @@ const Header = ({
   }
 
   useEffect(() => {
-    void fetch('http://localhost:3000/characters/count')
+    void fetch('https://rick-n-morty-api.herokuapp.com/characters/count')
       .then(async response => await response.json())
       .then(data => setCharacterCount(data.charactersCount))
   }, [])
