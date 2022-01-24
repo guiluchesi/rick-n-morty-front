@@ -9,9 +9,9 @@ interface Props {
 
 const CharacterCard = ({ character }: Props): ReactElement => {
   return (
-    <div className='card flex bg-zinc-700 rounded-lg overflow-hidden h-full items-center'>
-      <figure className='max-w-[160px] md:max-w-[220px] h-full'>
-        <img className='object-cover h-full' src={character.image} alt={character.name} />
+    <div className='card flex flex-wrap md:flex-nowrap bg-zinc-700 rounded-lg overflow-hidden h-full items-center'>
+      <figure className='w-full md:max-w-[220px] md:h-full mt-8 mb-4 md:m-0'>
+        <img className='object-cover h-full mx-auto rounded-full md:rounded-none' src={character.image} alt={character.name} />
       </figure>
 
       <div className='card-body p-4'>
